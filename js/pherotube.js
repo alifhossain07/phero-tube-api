@@ -25,19 +25,20 @@ const loadCategory = async () => {
       card.innerHTML = `
        <div class="">
         <figure>
-            <img src="${video.thumbnail}" alt="Shoes" />
+            <img src="${video.thumbnail}" alt="Thumbnail" class="h-40 w-96 object-cover" />
+
         </figure>
         <div class="card-body">
             <div class="flex gap-5">
                 <div>
-                    <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="" class="rounded-full w-16 h-16 object-cover overflow-hidden" >
+                    <img src="${video.authors[0].profile_picture}" alt="" class="rounded-full w-12 h-12 object-cover overflow-hidden" >
                 </div>
                 <div class="space-y-2">
-                    <h2 class="card-title font-semibold ">${video.title}</h2>
+                    <h2 class="card-title font-bold text-lg ">${video.title}</h2>
                     <p><span>Awlad Hossain</span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-6 h-6 text-blue-500 inline">
                         <path d="M9 12l2 2 4-4m5-3v9"></path>
                     </svg></p>
-                    <p>91k Views</p>
+                    <p>${video.others.views} Views</p>
                 </div>
             </div>
         </div>
