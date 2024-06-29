@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="night">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>PheroTube Blogs</title>
+</head>
+<body class="p-14">
+    <header>
+        <div class="flex justify-between">
+            <div>
+                <img src="Logo.png" alt="">
+            </div>
+            <div>
+                <h1 class="text-5xl">Phero<span class="text-red-700">Tube </span>Blogs</h1>
+            </div>
+            <div>
+                <button class="btn btn-warning"><a href="index.html">Go Back</a></button>
+            </div>
+        </div>
+
+        <!-- Blog Questions Part -->
+         
+        <div class="ml-10 mt-20">
+            <h1 class="text-center mt-10 text-4xl font-semibold">Welcome To <span class="text-red-700">Programming Hero </span> Tube Blogs</h1>
+        </div>
+
+        <div class="ml-10 mt-10">
+            <h1 class="text-3xl">Frequently Searched Topics</h1>
+        </div>
+
+        <!-- Question Divs -->
+         <div class="ml-10 mt-10">
+            <!-- q1 -->
+            <div class="space-y-4 mb-10 ">
+                <h1 class="text-2xl">1. Discuss VAR, LET,CONST in JavaScript</h1>
+                <p class="text-gray-500">In JavaScript, var, let, and const have different scoping rules. var is function-scoped, meaning it is only accessible within the function it is declared in and is hoisted to the top of its scope, initialized as undefined. Conversely, let and const are block-scoped, meaning they are only accessible within the block {} they are declared in. Both let and const are hoisted but not initialized, resulting in a temporal dead zone until their declaration is encountered. Additionally, const requires an initial value and cannot be reassigned, although objects and arrays it holds can be modified. Unlike var, neither let nor const create properties on the global object when declared in the global scope..</p>
+            </div>
+
+            <!-- q2 -->
+            <div class="space-y-4 mb-10">
+                <h1 class="text-2xl">2. What are the Use Cases of null and undefined?</h1>
+                <p class="text-gray-500">In JavaScript, null and undefined are used in different contexts. undefined indicates the absence of a value, typically when a variable has been declared but not initialized, a function lacks a return statement, or an object property is non-existent. It is the default value for uninitialized variables. null, on the other hand, is an intentional assignment representing the absence of any object value and is often used to signify an empty or non-existent object. Use undefined to indicate variables that have not been assigned a value and null to represent explicitly empty values.</p>
+            </div>
+            <!-- q3 -->
+            <div class="space-y-4 mb-10">
+                <h1 class="text-2xl">3. What do you mean by REST API?</h1>
+                <p class="text-gray-500">A REST API (Representational State Transfer Application Programming Interface) is a set of rules and conventions for building and interacting with web services. It uses standard HTTP methods like GET, POST, PUT, DELETE to perform CRUD (Create, Read, Update, Delete) operations on resources, which are identified by URLs. REST APIs are stateless, meaning each request from a client contains all the information needed to process the request. They are widely used due to their simplicity, scalability, and compatibility with various data formats such as JSON and XML</p>
+            </div>
+
+
+
+
+
+         </div>
+        
+
+    </header>
+    
+</body>
+</html>
