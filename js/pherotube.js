@@ -20,13 +20,26 @@ const loadCategory = async () => {
     const videoContainer = document.getElementById('video-container');
 
     videos.forEach(video => {
+        const postedDate = video.others.posted_date;
+        let timeString = '';
+
+        if (postedDate !== '') {
+          const postedDateInSeconds = parseInt(postedDate);
+          const postedDateInMinutes = Math.floor(postedDateInSeconds / 60);
+          const postedDateInHours = Math.floor(postedDateInMinutes / 60);
+          const remainingMinutes = postedDateInMinutes % 60;
+      
+          timeString = `${postedDateInHours}hr ${remainingMinutes}min ago`;
+        }
       const card = document.createElement('div');
       card.classList.add('card','bg-base-100' ,'w-84', 'shadow-xl');
       card.innerHTML = `
        <div class="">
-        <figure>
+        <figure class="relative">
             <img src="${video.thumbnail}" alt="Thumbnail" class="h-40 w-96 object-cover" />
-
+            <figcaption class="absolute bottom-0 right-0 bg-black text-white p-1 text-sm">
+                 ${timeString}
+            </figcaption>
         </figure>
         <div class="card-body">
             <div class="flex gap-5">
